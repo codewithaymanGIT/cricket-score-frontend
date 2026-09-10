@@ -1,0 +1,298 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.loading-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #0f172a;
+  color: #94a3b8;
+}
+
+.live-badge-wrap {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.live-badge {
+  background: #334155;
+  color: #94a3b8;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  display: inline-block;
+}
+
+.live-badge.pulsing {
+  background: #dc2626;
+  color: white;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.scoreboard {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.match-title {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  margin-bottom: 6px;
+}
+
+.innings-label {
+  font-size: 0.85rem;
+  color: #5b8fd6;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.main-score {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.wickets {
+  color: #f87171;
+  font-size: 2.2rem;
+}
+
+.overs-label {
+  color: #94a3b8;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+.run-rate {
+  color: #64748b;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.target-info {
+  margin-top: 14px;
+  padding: 8px 12px;
+  background: #1e293b;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #5b8fd6;
+}
+
+.players-panel, .scorer-panel {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.players-panel h3, .scorer-panel h3 {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.players-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.players-table th {
+  text-align: left;
+  color: #64748b;
+  font-weight: 500;
+  padding-bottom: 8px;
+  font-size: 0.8rem;
+}
+
+.players-table td {
+  padding: 6px 0;
+  border-top: 1px solid #334155;
+}
+
+.player-out {
+  color: #64748b;
+}
+
+.run-buttons {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.run-btn {
+  background: #334155;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.run-btn:hover {
+  background: #475569;
+}
+
+.wicket-btn {
+  width: 100%;
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.overs-update {
+  display: flex;
+  gap: 8px;
+}
+
+.overs-update input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: white;
+}
+
+.overs-update button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.result-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  text-align: center;
+  gap: 20px;
+}
+
+.result-screen h1 {
+  font-size: 1.5rem;
+  color: #4ade80;
+}
+
+.final-scores {
+  display: flex;
+  gap: 40px;
+}
+
+.final-scores div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.final-scores span {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.final-scores strong {
+  font-size: 1.8rem;
+}
+
+.final-scores small {
+  color: #64748b;
+}
+
+.selector-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.selector-row select {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.wicket-toggle {
+  margin: 12px 0;
+  font-size: 0.9rem;
+  color: #f87171;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wicket-toggle input {
+  width: 16px;
+  height: 16px;
+}
+
+.dismissal-fields {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.dismissal-fields select,
+.dismissal-fields input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: white;
+  font-size: 0.85rem;
+}
+
+.dismissal-text {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-style: italic;
+}
