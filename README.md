@@ -1,4 +1,4 @@
-# Cricket Score Management System (Frontend)
+﻿# Cricket Score Management System (Frontend)
 
 A live-updating cricket scoreboard dashboard built with React, providing ball-by-ball scoring controls and real-time match statistics.
 
@@ -21,3 +21,10 @@ npm run dev
 ```
 
 Requires the `cricket-score-springboot` backend running on `http://localhost:8080`.
+
+## Screenshots
+
+![Scoreboard](screenshots/scoreboard.png)
+
+![Scorer](screenshots/scorer.png)
+
